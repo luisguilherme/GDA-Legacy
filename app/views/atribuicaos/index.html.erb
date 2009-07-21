@@ -1,0 +1,30 @@
+<h1>Listing atribuicaos</h1>
+
+<table>
+  <tr>
+    <th>GDA</th>
+    <th>Sigla</th>
+    <th>Turma</th>
+    <th>Professor</th>
+    <th>Respostas dadas </th>
+  </tr>
+
+<% for atribuicao in @atribuicao %>
+  <tr>
+    <td><%=h atribuicao.gda.G_unidade %></td>
+    <td><%=h atribuicao.D_sigla %></td>
+    <td><%=h atribuicao.AT_turma %></td>
+    <td><%=h atribuicao.professor.PR_nome %></td>
+    <% respondentes = [] %>
+    <% atribuicao.respostas.each { |r| respondentes <<= r.aluno.A_id } %>
+    <td><%=h respondentes.uniq.count %></td>
+    <td><%= link_to 'Show', atribuicao %></td>
+    <td><%= link_to 'Edit', edit_atribuicao_path(atribuicao) %></td>
+    <td><%= link_to 'Destroy', atribuicao, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New atribuicao', new_atribuicao_path %>

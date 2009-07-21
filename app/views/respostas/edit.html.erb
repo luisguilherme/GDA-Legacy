@@ -1,0 +1,36 @@
+<h1>Editing resposta</h1>
+
+<% form_for(@resposta) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :R_id %><br />
+    <%= f.text_field :R_id %>
+  </p>
+  <p>
+    <%= f.label :AT_id %><br />
+    <%= f.text_field :AT_id %>
+  </p>
+  <p>
+    <%= f.label :A_id %><br />
+    <%= f.text_field :A_id %>
+  </p>
+  <p>
+    <%= f.label :P_id %><br />
+    <%= f.text_field :P_id %>
+  </p>
+  <p>
+    <%= f.label :R_resposta %><br />
+    <%= f.text_area :R_resposta %>
+  </p>
+  <p>
+    <%= f.label :AL_id %><br />
+    <%= f.text_field :AL_id %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @resposta %> |
+<%= link_to 'Back', respostas_path %>

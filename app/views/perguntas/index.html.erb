@@ -1,0 +1,22 @@
+<h1>Listing perguntas</h1>
+
+<table>
+  <tr>
+    <td>GDA</td>
+    <td>Texto</td>
+  </tr>
+
+<% for pergunta in @pergunta %>
+  <tr>
+    <td><%= pergunta.G_id %>
+    <td><%= pergunta.P_texto %>
+    <td><%= link_to 'Show', pergunta %></td>
+    <td><%= link_to 'Edit', edit_pergunta_path(pergunta) %></td>
+    <td><%= link_to 'Destroy', pergunta, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New pergunta', new_pergunta_path %>

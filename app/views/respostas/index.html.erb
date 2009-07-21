@@ -1,0 +1,24 @@
+<h1>Listing respostas</h1>
+
+<table>
+  <tr>
+    <th>P</th>
+    <th>R resposta</th>
+    <th>Al</th>
+  </tr>
+
+<% for resposta in @resposta %>
+  <tr>
+    <td><%=h resposta.pergunta.P_texto %></td>
+    <td><%=h resposta.R_resposta %></td>
+    <td><%=h resposta.AL_id %></td>
+    <td><%= link_to 'Show', resposta %></td>
+    <td><%= link_to 'Edit', edit_resposta_path(resposta) %></td>
+    <td><%= link_to 'Destroy', resposta, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New resposta', new_resposta_path %>

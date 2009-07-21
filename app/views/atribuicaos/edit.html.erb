@@ -1,0 +1,36 @@
+<h1>Editing atribuicao</h1>
+
+<% form_for(@atribuicao) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :AT_id %><br />
+    <%= f.text_field :AT_id %>
+  </p>
+  <p>
+    <%= f.label :D_sigla %><br />
+    <%= f.text_field :D_sigla %>
+  </p>
+  <p>
+    <%= f.label :PR_id %><br />
+    <%= f.text_field :PR_id %>
+  </p>
+  <p>
+    <%= f.label :G_id %><br />
+    <%= f.text_field :G_id %>
+  </p>
+  <p>
+    <%= f.label :AT_turma %><br />
+    <%= f.text_field :AT_turma %>
+  </p>
+  <p>
+    <%= f.label :AT_periodo %><br />
+    <%= f.text_field :AT_periodo %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @atribuicao %> |
+<%= link_to 'Back', atribuicaos_path %>

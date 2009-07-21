@@ -1,0 +1,23 @@
+<% lastper = nil %>
+<% alterna = {} %>
+<% @respostas.each do |resposta| %>
+  <% if resposta.P_id != lastper %>
+    <ul>
+    <% alterna.each do |k,v| %>
+      <li><%= k %>: <%= v %></li>
+    <% end %>
+    </ul>
+    <% alterna = {} %>
+    <% resposta.pergunta.alternativas.each { |a| alterna[a.AL_texto] = 0 } %>
+    
+    <% lastper = resposta.P_id %>
+    <p><strong><%= resposta.pergunta.P_texto -%></strong></p>
+  <% end %>
+  <% unless resposta.alternativa == nil %>
+    <% alterna[resposta.alternativa.AL_texto] += 1 %>
+  <% end %>
+  <p><%= resposta.R_resposta %></p>
+<% end %>
+
+<%= link_to 'Edit', edit_atribuicao_path(@atribuicao) %> |
+<%= link_to 'Back', atribuicaos_path %>

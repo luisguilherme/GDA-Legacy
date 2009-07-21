@@ -1,3 +1,5 @@
 class Disciplina < ActiveRecord::Base
-  belongs_to :gda, :foreign_key => :G_id, :primary_key => :G_id
+  belongs_to :gda, :foreign_key => :G_id
+  
+  set_primary_key :D_sigla
 end
