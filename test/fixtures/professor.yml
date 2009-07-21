@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  PR_id: 1
+  PR_nome: MyString
+  PR_login: MyString
+  PR_senha: MyString
+
+two:
+  PR_id: 1
+  PR_nome: MyString
+  PR_login: MyString
+  PR_senha: MyString

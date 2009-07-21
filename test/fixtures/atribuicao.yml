@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  AT_id: 1
+  D_sigla: MyString
+  PR_id: 1
+  G_id: 1
+  AT_turma: 
+  AT_periodo: 1
+
+two:
+  AT_id: 1
+  D_sigla: MyString
+  PR_id: 1
+  G_id: 1
+  AT_turma: 
+  AT_periodo: 1

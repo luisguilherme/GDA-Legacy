@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  AL_id: 1
+  AL_texto: MyText
+  P_id: 1
+
+two:
+  AL_id: 1
+  AL_texto: MyText
+  P_id: 1

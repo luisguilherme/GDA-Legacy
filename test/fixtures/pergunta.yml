@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  P_id: 1
+  P_texto: MyText
+  G_id: 1
+  P_tipo: MyString
+
+two:
+  P_id: 1
+  P_texto: MyText
+  G_id: 1
+  P_tipo: MyString
